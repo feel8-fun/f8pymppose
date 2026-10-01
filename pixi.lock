@@ -54,7 +54,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.16.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2026c-h151e31d_0.conda
       - pypi: ./
-      - pypi: ./.sdk/packages/f8pysdk
+      - pypi: ./.sdk/python
       - pypi: https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/13/bc/8c13eb66537dce1d2bd3a57132902f38d0e7f5bb46fa9f4daed9fe9d76ee/tomlkit-0.15.1-py3-none-any.whl
@@ -116,7 +116,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/vcomp14-14.51.36247-habf1de7_41.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_7.conda
       - pypi: ./
-      - pypi: ./.sdk/packages/f8pysdk
+      - pypi: ./.sdk/python
       - pypi: https://files.pythonhosted.org/packages/09/29/6985260569ee3c7f6fcae252bc06e2a843e5b90eed665a2936bdd26fa283/opencv_contrib_python-5.0.0.93-cp37-abi3-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
@@ -901,7 +901,7 @@ packages:
   - opencv-contrib-python-headless>=4.10.0
   - mediapipe>=0.10.14
   requires_python: '>=3.10'
-- pypi: ./.sdk/packages/f8pysdk
+- pypi: ./.sdk/python
   name: f8pysdk
   requires_dist:
   - msgspec>=0.18.6
