@@ -1,13 +1,13 @@
 {
   "schemaVersion": "f8serviceIndex/1",
-  "modelRoot": "../resources/models",
+  "modelRoot": "${F8_MODEL_ROOT}",
   "services": [
     {
       "serviceClass": "f8.mp.pose",
       "manifests": {
-        "any": "services/f8.mp.pose/service.yml"
+        "any": "${F8_PACKAGE_ROOT}/config/services/f8.mp.pose/service.yml"
       },
-      "describe": "describes/f8.mp.pose.json"
+      "describe": "${F8_PACKAGE_ROOT}/config/describes/f8.mp.pose.json"
     }
   ]
 }

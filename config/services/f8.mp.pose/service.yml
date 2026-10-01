@@ -8,4 +8,4 @@ launch:
   - -m
   - f8pymppose.main_pose
   env: {}
-  workdir: ../../..
+  workdir: ${F8_PACKAGE_ROOT}
