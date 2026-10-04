@@ -10,6 +10,7 @@ pytest = ">=8.4.2,<9"
 
 
 [pypi-dependencies]
+mediapipe = ">=0.10.32,<0.11"
 f8pysdk = {path = ".sdk/python", editable = false}
 hatchling = ">=1.28,<2"
 basedpyright = ">=1.31,<2"
@@ -18,3 +19,9 @@ f8pymppose = {path = ".", editable = true}
 
 [tasks]
 check = "python -m f8pysdk.extension_packaging --check"
+
+[tasks.f8pymppose]
+cmd = "python -m f8pymppose.main_pose"
+
+[environments]
+mediapipe = []
