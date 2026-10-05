@@ -15,7 +15,8 @@
       },
       "modelDirectories": [
         "mediapipe"
-      ]
+      ],
+      "resources": [{"resourceId": "pose-models", "path": "${F8_PACKAGE_ROOT}/resources/models/mediapipe/README.md", "description": "MediaPipe pose model profiles and storage."}]
     }
   ]
 }
