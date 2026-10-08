@@ -1044,6 +1044,9 @@ packages:
   - eclipse-zenoh>=1.9.0,<1.10
   - msgpack>=1.0
   - pyyaml>=6.0.3,<7
+  - httpx>=0.28,<1 ; extra == 'media'
+  - pydantic>=2.11,<3 ; extra == 'platform-api'
+  - httpx>=0.28,<1 ; extra == 'platform-client'
   requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/09/29/6985260569ee3c7f6fcae252bc06e2a843e5b90eed665a2936bdd26fa283/opencv_contrib_python-5.0.0.93-cp37-abi3-win_amd64.whl
   name: opencv-contrib-python
