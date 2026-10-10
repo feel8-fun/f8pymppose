@@ -56,6 +56,7 @@ class PosePayloadTests(unittest.TestCase):
         self.assertTrue(should_run_inference(None, 100, 3))
         self.assertFalse(should_run_inference(100, 102, 3))
         self.assertTrue(should_run_inference(100, 103, 3))
+        self.assertTrue(should_run_inference(1000, 1, 3))
 
     def test_extract_pose_keypoints_with_visibility_threshold(self) -> None:
         result = _FakeTasksResult(

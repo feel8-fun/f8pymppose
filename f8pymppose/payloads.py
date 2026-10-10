@@ -109,7 +109,7 @@ def _bone_orientation_quaternion(
 
 
 def should_run_inference(last_infer_frame_id: int | None, frame_id: int, infer_every_n: int) -> bool:
-    if last_infer_frame_id is None:
+    if last_infer_frame_id is None or frame_id < last_infer_frame_id:
         return True
     return int(frame_id) - int(last_infer_frame_id) >= int(max(1, infer_every_n))
 

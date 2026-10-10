@@ -65,6 +65,7 @@ class MediaPipePoseServiceNode(ServiceNode):
         self._last_error_signature = ""
         self._last_error_repeats = 0
         self._last_infer_frame_id: int | None = None
+        self._stream_identity: tuple[str, str] | None = None
         self._last_processed_frame_id: int | None = None
 
     def attach(self, bus: Any) -> None:
@@ -353,7 +354,6 @@ class MediaPipePoseServiceNode(ServiceNode):
                     continue
 
                 await self._ensure_config_loaded()
-                await self._ensure_pose_runtime()
 
                 stream_key = self._resolve_video_stream_key()
                 if not stream_key:
@@ -372,6 +372,14 @@ class MediaPipePoseServiceNode(ServiceNode):
                 frame = self._video_input.read_frame()
                 if frame is None:
                     continue
+
+                identity = (stream_key, frame.stream_epoch)
+                if identity != self._stream_identity:
+                    self._last_processed_frame_id = None
+                    self._last_infer_frame_id = None
+                    await self._reset_pose_runtime()
+                    self._stream_identity = identity
+                await self._ensure_pose_runtime()
 
                 if not self._accept_frame_for_processing(frame.frame_id):
                     continue

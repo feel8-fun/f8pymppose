@@ -18,6 +18,7 @@ class FrameContext:
     height: int
     pitch: int
     payload: bytes
+    stream_epoch: str = "00000000000000000000000000000000"
 
 
 class LatestVideoInput:
@@ -87,6 +88,7 @@ class LatestVideoInput:
                 height=height,
                 pitch=pitch,
                 payload=bytes(frame.payload[:frame_bytes]),
+                stream_epoch=frame.stream_epoch,
             )
         finally:
             frame.release()
